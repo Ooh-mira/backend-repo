@@ -1,0 +1,23 @@
+spring:
+  config:
+    activate:
+      on-profile: local
+
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    # 데이터베이스 이름(catchtable)과 포트(3306) 확인
+    url: jdbc:mysql://localhost:3306/catchtable?serverTimezone=Asia/Seoul&characterEncoding=UTF-8&rewriteBatchedStatements=true
+    username: root        # 설치할 때 설정한 ID (보통 root)
+    password: ""  # 설치할 때 설정한 비밀번호 (여기에 입력하세요!)
+
+  jpa:
+    database: mysql
+    database-platform: org.hibernate.dialect.MySQL8Dialect
+    hibernate:
+      # [중요] create로 하면 시작할 때마다 데이터가 다 날아갑니다!
+      # 데이터를 보존하려면 update 또는 none을 사용하세요.
+      ddl-auto: update
+    show-sql: true
+    properties:
+      hibernate:
+        format_sql: true
