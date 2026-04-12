@@ -1,4 +1,4 @@
-package com.junwoo.catchtablebackend.domain.restaurant.repository;
+package com.junwoo.catchtablebackend.domain.restaurant.projection;
 
 import java.math.BigDecimal;
 

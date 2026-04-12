@@ -10,6 +10,7 @@ public record RestaurantMapResponse (
     Integer totalSeats,
     Double distance,
     BigDecimal latitude,
-    BigDecimal longitude
+    BigDecimal longitude,
+    String thumbnailUrl
 ) {
 }

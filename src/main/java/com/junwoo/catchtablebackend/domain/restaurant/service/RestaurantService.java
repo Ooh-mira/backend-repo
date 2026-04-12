@@ -2,6 +2,7 @@ package com.junwoo.catchtablebackend.domain.restaurant.service;
 
 import com.junwoo.catchtablebackend.domain.restaurant.dto.RestaurantDetailResponse;
 import com.junwoo.catchtablebackend.domain.restaurant.dto.RestaurantMapResponse;
+import com.junwoo.catchtablebackend.domain.restaurant.dto.RestaurantSearchResponse;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 
@@ -15,4 +16,6 @@ public interface RestaurantService {
      * 레스토랑 상세 정보 조회 (메뉴 포함)
      */
     RestaurantDetailResponse getRestaurantDetail(Long restaurantId);
+
+    RestaurantSearchResponse search(String keyword, Pageable pageable);
 }
